@@ -1,122 +1,186 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>你的姓名 - 个人简历</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jiesu - Homepage</title>
+  <!-- 引入 Google 花体字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Segoe+UI&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: "Helvetica Neue", sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 18px;
       margin: 0;
-      padding: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      max-width: 960px;
+      width: 100%;
+      display: flex;
+      gap: 40px;
+      background-color: #fff;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
     }
 
-    h1, h2 {
-      color: #333;
+    .left {
+      width: 220px;
+      text-align: center;
     }
 
-    .section {
-      margin-bottom: 30px;
+    .left img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #bbb;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .left img:hover {
+      transform: scale(1.05);
     }
 
-    .contact {
-      margin-bottom: 20px;
-      font-size: 14px;
+    .left h2 {
+      margin: 14px 0 8px;
+      font-size: 32px;
+      font-family: "Dancing Script", cursive;
+      font-weight: 700;
+      color: #1a73e8;
+      letter-spacing: 1.2px;
+    }
+
+    .left p {
+      margin: 6px 0;
+      font-size: 16px;
       color: #555;
     }
 
-    ul {
-      padding-left: 20px;
+    /* 中文名字苏洁用行书，且为黑色 */
+    .chinese-name {
+      font-family: "STXingkai", "KaiTi", "楷体", "华文行书", serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      color: #000; /* 黑色 */
+      margin: 6px 0;
     }
 
-    a {
-      color: #007acc;
+    .left a {
+      display: block;
+      margin: 10px 0;
       text-decoration: none;
+      color: #1a73e8;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.2s ease;
     }
-
-    a:hover {
+    .left a:hover {
+      color: #155ab8;
       text-decoration: underline;
     }
 
-    .skill-badge {
-      display: inline-block;
-      background-color: #eee;
-      color: #333;
-      border-radius: 5px;
-      padding: 3px 8px;
-      margin: 3px;
-      font-size: 13px;
+    .right {
+      flex: 1;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .right a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .right a:hover {
+      color: #155ab8;
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 26px;
+      margin-top: 30px;
+      border-bottom: 3px solid #08090a;
+      padding-bottom: 6px;
+      color:  #08090a;
+    }
+
+    /* 论文标题用深黑色 */
+    .pub-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #222; /* 黑色 */
+    }
+
+    .authors {
+      font-style: italic;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #666;
+    }
+
+    .links a {
+      margin-right: 14px;
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 15px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .links a:hover {
+      color: #155ab8;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>你的姓名</h1>
-    <div class="contact">
-      📍 你所在的城市 | 📧 <a href="mailto:your.email@example.com">your.email@example.com</a> | 📞 123-456-7890 | <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <div class="left">
+      <img src="sky.jpg" alt="Profile Picture" />
+      <h2>Jiesu</h2>
+      <p class="chinese-name">苏洁</p>
+      <p>Sun Yat-sen University</p>
     </div>
+    <div class="right">
+      <div class="section-title">About</div>
+      <p>
+        I am currently a junior student at 
+        <a href="https://marine.sysu.edu.cn/">School of Marine Sciences</a>,
+        <a href="https://marine.sysu.edu.cn/">Sun Yat-sen University</a>, under the supervision of
+        <a href="https://marine.sysu.edu.cn/teacher/931">Guo Changjun</a> and 
+        <a href="https://sklbc.sysu.edu.cn/teacher/177">He Jianguo</a>. My research interests are in the areas of ...
+      </p>
+      <p>Email: your_email@domain.com</p>
 
-    <div class="section">
-      <h2>简介</h2>
-      <p>简洁地介绍你自己，例如：“热爱编程与人工智能的本科生，擅长 Python 和 Web 开发，追求技术与美感的统一。”</p>
-    </div>
+      <div class="section-title">Publications</div>
 
-    <div class="section">
-      <h2>教育背景</h2>
-      <p><strong>某某大学</strong> – 本科 | 计算机科学与技术 | 2021 - 2025（预计）</p>
-    </div>
-
-    <div class="section">
-      <h2>技能</h2>
-      <div>
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">HTML/CSS</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">Git</span>
-        <span class="skill-badge">Linux</span>
-        <span class="skill-badge">机器学习</span>
+      <div class="pub-title">Establishment and characterization of a novel cell line derived from spotted 
+sea bass Lateolabrax maculatus and its susceptibilities to iridoviruses</div>
+      <div class="authors">Zhipeng Zhan, Xueqian Cao, <b>Jiesu</b>*, ...</div>
+      <div>Aquaculture, 2024</div>
+      <div class="links">
+        <a href="https://doi.org/10.1016/j.aquaculture.2024.741612" target="_blank" rel="noopener">[arXiv]</a>
+        <a href="Establishment and characterization of a novel cell line derived from spotted sea bass Lateolabrax maculatus and its susceptibilities to iridoviruses.pdf" target="_blank" rel="noopener">[PDF]</a>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>项目经历</h2>
-      <ul>
-        <li>
-          <strong>智能简历生成器</strong>（2024）<br>
-          使用 Python 和 Flask 开发的在线简历生成网站，支持多模板导出 PDF。
-        </li>
-        <li>
-          <strong>聊天网页应用</strong>（2025）<br>
-          基于 Flask-SocketIO 的实时聊天系统，支持用户头像上传和群聊功能。
-        </li>
-      </ul>
-    </div>
+      <div class="pub-title">Impact of VHSV on CIITA-mediated MHCII expression and antigen 
+presentation in largemouth bass</div>
+      <div class="authors">Xiaobing Lu, Ziling Qin, Zhe Hu, Hao Huang, <b>Jiesu</b>, ...</div>
+      <div>Fish & Shellfish Immunology, 2025</div>
+      <div class="links">
+        <a href="https://doi.org/10.1016/j.fsi.2025.110336" target="_blank" rel="noopener">[arXiv]</a>
+        <a href="Impact of VHSV on CIITA-mediated MHCII expression and antigen presentation in largemouth bass.pdf" target="_blank" rel="noopener">[PDF]</a>
+      </div>
 
-    <div class="section">
-      <h2>获奖经历</h2>
-      <ul>
-        <li>2024 校级优秀学生奖学金</li>
-        <li>2023 全国大学生计算机设计大赛三等奖</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>语言能力</h2>
-      <ul>
-        <li>中文（母语）</li>
-        <li>英语（CET-6，良好读写能力）</li>
-      </ul>
     </div>
   </div>
 </body>
